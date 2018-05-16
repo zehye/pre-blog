@@ -1,6 +1,6 @@
 title: Stack Problems
 description: My Personal Stack Problems
-author: Agus Makmun
+author: JIHYE
 github: https://github.com/agusmakmun
 about: I am freelance developer. Currently doing more in backend, focused in Python and Django.
 disqus_shortname: stackproblems
@@ -40,7 +40,7 @@ urls:
       url: /feed.xml
 
 url:
-baseurl: 
+baseurl:
 paginate: 20
 per_page: 20
 paginate_path: "/page/:num/"
