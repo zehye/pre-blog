@@ -4,6 +4,8 @@ title:  git day2. Git이란 무엇인가?
 date:   2016-12-29 18:34:10 +0700
 categories: [git]
 ---
+이 포스팅에서는 `git`에 대해 알아보며, git에서 사용하는 주요 용어에 대해서 설명한다.
+<hr>
 
 ## Git?
 
