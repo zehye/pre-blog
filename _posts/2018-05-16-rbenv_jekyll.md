@@ -51,7 +51,9 @@ brew install rbenv ryby-build
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 ```
-#### 설정파일을 작성한 후 터미널을 종료하고 새로 열어준다
+**설정파일을 작성한 후 터미널을 종료하고 새로 열어준다**
+
+
 
 #### rbenv를 이용해 ruby설치, 전역에서 사용할 ruby 버전 지정
 ```
