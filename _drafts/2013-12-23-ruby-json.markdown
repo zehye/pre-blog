@@ -13,6 +13,9 @@ require 'json'
 require 'net/http'
 require 'libnotify'
 
+http://github.com - automatic!
+[GitHub](http://github.com)
+
 def parsejson
     file = "http://api.openweathermap.org/data/2.5/find?q=London&mode=json"
     response = Net::HTTP.get_response(URI.parse(file))
