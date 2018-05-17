@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  rbenv환경에서 Jekyll 블로그 생성하고 GitHub Pages에 배포하기
-date:   2016-12-29 18:34:10 +0700
 categories: [jekyll]
 ---
 
@@ -65,3 +64,8 @@ eval "$(rbenv init -)"
 ```
 `*`표가 붙은 부분이 현재 사용하고 있는 `Ruby`버전을 나타낸다.
 나는 초기에 2.4.1버전을 설치했는데 현재는 2.5.1까지도 나와있으니 해당버전으로 깔아도 될듯하다.
+
+http://github.com - automatic!
+[GitHub](http://github.com)
+
+[ ] 언제 완성할까
