@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  git day3. git 사용방법
+title:  git 사용방법
 categories: [git]
 ---
 이 포스팅에서는 `git`의 사용방법에 대해 알아보도록 하겠다.
