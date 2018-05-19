@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  git-branch의 workflow 이해하기 -rebase
+title:  git-branch에서 rebase하기
 categories: [git, branch]
 ---
 이 포스팅에서는 `branch` `Workflow`에 대해 공부해본다.
@@ -10,12 +10,9 @@ categories: [git, branch]
 
 ## Rebase?
 
+`rebase`또한 브랜치들을 `merge`하는 방법이다.
 
-리베이스: 머지하는 방법
-합치는 방법은 머지, 리베이스
-
-어떻게 달라질까?
-
+그러나 기본 `merge`, 즉 `3-way`
 머지는 새로운 커밋을 만들었는데, 그래서 조금 복잡했는데
 굳이 그러지 않아도 되는 경우가 있따.
 

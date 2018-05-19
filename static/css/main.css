@@ -62,7 +62,7 @@ div.content pre {
   color: #FFF;
   overflow-x: auto;
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
-  font-size: 12px;
+  font-size: 10px;
   border: none;
 }
 div.content .highlight {
@@ -108,7 +108,7 @@ div.col-sm-3 img.profile-avatar {
 
 /* Pagination */
 .PageNavigation {
-  font-size: 14px;
+  font-size: 20px;
   display: block;
   width: auto;
   overflow: hidden;
