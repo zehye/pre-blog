@@ -89,7 +89,7 @@ key-value 형태로 항목을 가지는 자료구조
 ### 집합연산
 
 연산자 | 설명
----- | ----
+--- | ---
 | | 합집합(union)
 & | 교집합(intersection)
 - | 차집합(difference)
