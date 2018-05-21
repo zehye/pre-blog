@@ -100,33 +100,33 @@ key-value 형태로 항목을 가지는 자료구조
 
 ### 실습
 
-1. `apple`은 `사과`, `banana`는 `바나나`, `cherry`는 `체리`의 key-value를 갖는 `fruits`라는 이름의 사전을 만든다.
+1.`apple`은 `사과`, `banana`는 `바나나`, `cherry`는 `체리`의 key-value를 갖는 `fruits`라는 이름의 사전을 만든다.
 
 ```
 fruits = { 'apple': '사과', 'banana': '바나나', 'cherry':'체리'}
 ```
 
-2. `fruits`를 `Set`으로 만들어 `fruits_set`변수에 할당한다.
+2.`fruits`를 `Set`으로 만들어 `fruits_set`변수에 할당한다.
 
 ```
 fruits_set = set(fruits)
 ```
 
-3. `fruits_set`에 `durian`이 존재하는지 확인한다.
+3.`fruits_set`에 `durian`이 존재하는지 확인한다.
 
 ```
 'durian' in fruits_set
 >>> False
 ```
 
-4. `fruits`사전에서 `apple`키에 해당하는 값을 출력한다.
+4.`fruits`사전에서 `apple`키에 해당하는 값을 출력한다.
 
 ```
 fruits['apple']
 >>> '사과'
 ```
 
-5. `girlgroups`라는 이름의 2차원 사전을 만들고 출력해본다.
+5.`girlgroups`라는 이름의 2차원 사전을 만들고 출력해본다.
 
 * 최상위 키는 `girlsday`와 `redvelvet`이 있으며, 각각 자식으로 사전을 갖는다.
 
@@ -147,28 +147,28 @@ girlgroups = {
 }
 ```
 
-6. `girlgroups`사전의 최상위 키 목록을 출력해본다.
+6.`girlgroups`사전의 최상위 키 목록을 출력해본다.
 
 ```
 girlgroups.keys()
 >>> dict_keys(['girlsday', 'redvelvet'])
 ```
 
-7. `girlgroups['girlsday']`의 모든 키를 출력해본다.
+7.`girlgroups['girlsday']`의 모든 키를 출력해본다.
 
 ```
 girlgroups['girlsday'].keys()
 >>> dict_keys(['korean', 'members'])
 ```
 
-8. `girlgroups['redvelvet']`의 모든 값을 출력해본다.
+8.`girlgroups['redvelvet']`의 모든 값을 출력해본다.
 
 ```
 girlgroups['redvelvet'].values()
 >>> dict_values(['레드벨벳', ['아이린', ' 슬기', ' 웬디', ' 조이', ' 예리']])
 ```
 
-9. `x = {1,2,3,4,5,6,8}`, `y={4,5,6,9,10,11}`, `z={4,6,8,9,7,10,12}`일 때,
+9.`x = {1,2,3,4,5,6,8}`, `y={4,5,6,9,10,11}`, `z={4,6,8,9,7,10,12}`일 때,
 
 * x,y,z의 교집합에 해당하는 숫자는?
 

@@ -113,19 +113,19 @@ print(var)
 
 ### 실습
 
-1. 1일이 몇초인지 계산 후 해당결과를 seconds_per_day 변수에 할당하라
+1.1일이 몇초인지 계산 후 해당결과를 seconds_per_day 변수에 할당하라
 
 ```
 seconds_per_day  = 24 * 60 * 60
 ```
 
-2. 1년이 몇 초인지 계산 후 해당결과를 seconds_per_year 변수에 할당하라
+2.1년이 몇 초인지 계산 후 해당결과를 seconds_per_year 변수에 할당하라
 
 ```
 seconds_per_year = 365 * seconds_per_day
 ```
 
-3. 각 변수의 타입을 확인하라
+3.각 변수의 타입을 확인하라
 
 ```
 print(type(seconds_per_day))
@@ -135,7 +135,7 @@ print(type(seconds_per_day))
 type(seconds_per_year)
 ```
 
-4. `문자열을 입력해주세요 : `라는 안내문구를 띄워주도록 `input`함수를 사용하고, 결과는 `var`에 할당하라  
+4.`문자열을 입력해주세요 : `라는 안내문구를 띄워주도록 `input`함수를 사용하고, 결과는 `var`에 할당하라  
 
 ```
 var = input('문자열을 입력해주세요 : ')
