@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  python 함수
+title:  python 함수 시작
 categories: [python]
 ---
 이 포스팅에서는 `pyrhon`의 함수에 대해 공부해본다.
