@@ -44,3 +44,18 @@ for i, name in enumerate(['body', 'foo', 'bar']):
 순서값과 함께, body, foo, bar가 순서대로 출력되었다. 즉, 위 예제와 같이 enumerate를 for문과 함께 사용하면 자료형의 현재 순서(index)와 그 값을 쉽게 알 수 있다.
 
 for 문처럼 반복되는 구간에서 객체가 현재 어느 위치에 있는 지 알려주는 인덱스 값이 필요할 때 사용하면 매우 유용하다.
+
+
+## dictinary key로 value얻기 (get)
+
+```
+>>> a = {'name':'pey', 'phone':'0119993323', 'birth': '1118'}
+>>> a.get('name')
+'pey'
+>>> a.get('phone')
+'0119993323'
+```
+
+get(x) 함수는 x라는 key에 대응되는 value를 돌려준다. 앞서 살펴보았듯이 a.get('name')은 a['name']을 사용했을 때와 동일한 결과값을 돌려받는다.
+
+다만, 다음 예제에서 볼 수 있듯이 a['nokey']처럼 존재하지 않는 키(nokey)로 값을 가져오려고 할 경우 a['nokey']는 Key 오류를 발생시키고 a.get('nokey')는 None을 리턴한다는 차이가 있다. 어떤것을 사용할지는 여러분의 선택이다.

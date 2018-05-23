@@ -429,14 +429,25 @@ for item in g:
 ```
 def print_fruitname(a):
   if a == 'red':
-    print('apple')
+    return 'apple'
   elif a == 'yellow':
-    print('banana')
+    return 'banana'
   elif a == 'green':
-    print('melon')
+    return 'melon'
   else:
-    print('I don\'t know')
+    return 'I don't know'
 
+```
+
+```
+fruit_dict = {
+    'red':'apple',
+    'yellow':'banana',
+    'green':'melon',
+}
+
+def what_fruit(color):
+    return fruit_dict.get(color,'I don\'t konw')
 ```
 
 2.1번에서 작성한 함수에 docstring을 작성하여 함수에 대한 설명을 달아보고, help(함수명)으로 해당 설명을 출력해본다.
@@ -445,13 +456,13 @@ def print_fruitname(a):
 def print_fruitname(a):
   '이 함수는 과일의 색을 넣으면 해당 과일의 정보를 알려줍니다.'
   if a == 'red':
-    print('apple')
+    return 'apple'
   elif a == 'yellow':
-    print('banana')
+    return 'banana'
   elif a == 'green':
-    print('melon')
+    return 'melon'
   else:
-    print('I don\'t know')
+    return 'I don't know'
 
 help(print_fruitname)
 
@@ -464,21 +475,57 @@ def print_number(a,b=None):
   if b is None:
     return a ** 2
   else:
-    return a,b
+    return a*b
 
+# 더 간단한 방법
+def square_or_multi_default_parameter(a, b=None):
+  if b:
+    return a ** 2
+  return (a*b)
+
+# 더더 간단한 방법
+def square_or_multi_default_parameter(a, b=None):
+    return a*b if b else a**2
+
+# 혹은 위치인자 묶음을 통해서 구하는 방법
+def squeare_of_multi_positional_args(*args): #위치 인자 묶음 사용
+    if len(args) == 2:
+        return args[0] * args[1]
+    return args[0] **2
+
+# 더 사람이 이해하기 쉽게 표현해보자면
+def squeare_of_multi_positional_args(*args): #위치 인자 묶음 사용
+    args_length = len(args)
+    # if args_length > 2 or args_length <1:
+    if not (args_length == 1 or args_length ==2):
+        raise ValueError('숫자는 1개 또는 2개로 입력해주세요')
+    if len(args) == 2:
+        return args[0] * args[1]
+    return args[0] **2
+
+
+# 튜플, 언패킹으로 푸는 방법
+def squeare_of_multi_positional_args(*args):
+    if len(args) == 1:
+        # 튜플 언패킹 시, 좌-우변 모두 'tuple'형태로 만들어야 한다. (',' 반드시 있어야 한다.)
+        args1, = args
+        return args1 ** 2
+    elif len(args2) == 2:
+        arg1, arg2 == args
+        return args1 * args2
 
 print_number(4)
 >>> 16
 
 print_number(4,6)
->>> (4,6)
+>>> 24
 ```
 
 4.두 개의 숫자를 인자로 받아 합과 차를 튜플을 이용해 동시에 반환하는 함수를 정의하고 사용해본다.
 
 ```
 def print_number(a,b):
-  return a+b, a-b
+  return (a+b, absa-b)
 
 
 print_number(9,5)
@@ -503,35 +550,4 @@ print_number(3,4,5,6,7)
 
 ```
 [(lambda x,y : '{} x {} = {}'.format(x,y,x*y)) (x,y) for x in range(2,10) for y in range(1,10)]
-```
-
-
-### 알고리즘
-* 순차검색
-
-- 문자열과 키 문자 1개를 받는 함수 구현
-
-- while문을 이용, 문자열에서 키 문자가 존재하는 index위치를 검사 후 해당 index를 리턴
-
-- 찾지 못했을 경우 -1을 리턴
-
-```
-def print_string(a,b=None):
-  while True:
-    if b is None:
-      return -1
-    else:
-      b.index(print_string)
-      return b.index(print_string)
-
-
-def print_string(a,b=None):
-  return {'a':'b'}
-  while True:
-    if b is None:
-      return -1
-    else:
-      return print_string.index(b)
-
-마지막을 모르겠다.....
 ```

@@ -3,7 +3,7 @@ layout: post
 title:  python 문자열
 categories: [python]
 ---
-이 포스팅에서는 `pyrhon`의 문자열에 대해 공부해본다.
+이 포스팅에서는 `python`의 문자열에 대해 공부해본다.
 
 <hr>
 
