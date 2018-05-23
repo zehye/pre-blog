@@ -392,7 +392,7 @@ half(8)
 ```
 def range_gen(num):
   i = 0
-  while i < um:
+  while i < num:
     yield i
     i +=1
 
@@ -514,3 +514,24 @@ print_number(3,4,5,6,7)
 - while문을 이용, 문자열에서 키 문자가 존재하는 index위치를 검사 후 해당 index를 리턴
 
 - 찾지 못했을 경우 -1을 리턴
+
+```
+def print_string(a,b=None):
+  while True:
+    if b is None:
+      return -1
+    else:
+      b.index(print_string)
+      return b.index(print_string)
+
+
+def print_string(a,b=None):
+  return {'a':'b'}
+  while True:
+    if b is None:
+      return -1
+    else:
+      return print_string.index(b)
+
+마지막을 모르겠다.....
+```
