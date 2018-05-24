@@ -15,7 +15,7 @@ categories: [python]
 
 메인 프로그램(현재 동작하는 프로그램의 최상위 위치)의 영역은 전역영역(`global scope`)라고 하며, 전역 스코프 내부에서 독립적인 영역을 갖고 있는 경우에는 지역영역(`local scope`)라고 부른다.
 
-```
+```python
 champion = 'Lux'
 
 def show_global_champion():
@@ -28,7 +28,7 @@ print('print champion : {}'.format(champion))
 >>> print champion: Lux
 ```
 
-```
+```python
 champion = 'Lux'
 
 def show_global_champion():
@@ -50,7 +50,7 @@ change_global_champion 함수에서 오류를 볼 수 있다.
 
 첫번째 코드에서는 `champion`변수가 함수의 로컬 스코프에 존재하지 않기 때문에 글로블스코프에서 해당 변수를 찾아 출력했으나, 다음 코드에서는 내부에 또다른 `champion`변수가 존재하기 때문에 할당하기 전인 변수를사용한 것으로 판단하여 프로그램에서 오류를 발생시킨다.
 
-```
+```python
 id(show_global_champion)
 >>> 4378671712
 
@@ -60,7 +60,7 @@ id(change_global_champion)
 
 뿐만 아니라, 각 영역에 해당하는 데이터들은 `locals()`함수를 사용해 확인할 수 있으며, 전역 영역의 데이터들은 `globals()`함수를 사용한다.
 
-```
+```python
 champion = 'Lux'
 
 def show_global_champion():
@@ -101,7 +101,7 @@ change_global_champion()
 
 # 로컬 스코프에서 글로벌 스코프의 변수를 사용
 
-```
+```python
 champion = 'Lux'
 
 def change_global_champion():
@@ -118,7 +118,7 @@ print('print global champion : {}'.format(champion))
 이 경우에는 `show_global_champion`함수와는 다르게 `change_glabal_champion`함수는 `champion`변수에 새로운 값(`Ahri`)을 대입한다. 만약 로컬 스코프에서 글로벌 스코프의 변수를 변경해야 한다면, 해당 변수가 로컬 스코프에서 생성되는 것이 아닌 글로벌 영역에 이미 존재하는 값을 가용함을 명시해주어야 한다.
 
 
-```
+```python
 champion = 'Lux'
 
 def change_glabal_champion():
@@ -139,7 +139,7 @@ print('print global champion : {}'.format(champion))
 
 ### 내부 함수에서의 로컬 스코프 (nonlocal)
 
-```
+```python
 champion = 'Lux'
 
 def local1():
@@ -193,7 +193,7 @@ local1()
 
 인자로 전달한 경우
 
-```
+```python
 global_level = 100
 
 def level_add(value):
@@ -216,9 +216,9 @@ print(global_level)
 # 여전히 100만 남기 때문에 프린트 글로벌 레벨은 100이 그대로 실행된다.
 ```
 
-글로벌 키워드를 사용한 경우
+### 글로벌 키워드를 사용한 경우
 
-```
+```python
 global_level = 100
 
 def level_add():
@@ -246,11 +246,11 @@ print(global_level)
 
 한 줄 짜리 표현식으로 이루어지며, 반복문이나 조건문 등의 제어문은 포함될 수 없다. 또한 함수이지만 정의/호출이 나누어져 있지 않으며 표현식 자체가 바로 호출된다.
 
-```
+```python
 lambda <매개변수> : <표현식>
 ```
 
-```
+```python
 # 함수의 정의
 >>> def multi(x):
 ...   return x*x
@@ -270,7 +270,7 @@ lambda <매개변수> : <표현식>
 25
 ```
 
-```
+```python
 def multi(x):
   return x*x
 
@@ -291,7 +291,7 @@ get_one_value_and_execute_function(5, lambda x: x*x)
 
 함수가 정의된 환경을 말하며, 파이썬 파일이 여러개일 경우 각 파일은 하나의 `모듈` 역할을 하고, 각 `모듈`은 독립적인 환경을 가진다. 독립된 환경은 각자의 영역을 전역 영역으로 사용한다.
 
-```
+```python
 level = 0
 
 def outer():
@@ -339,7 +339,7 @@ print(f)
 4.위 2가지를 행하는 내부 함수를 반환
 
 
-```
+```python
 def print_arguments(original_function):
 
   def decorated_function(*args, **kwargs):
@@ -351,7 +351,7 @@ def print_arguments(original_function):
 
 ```
 
-```
+```python
 def square(x):
   return x**2
 
@@ -389,7 +389,7 @@ half(8)
 제너테이터는 함수를 통해 만들어지고, 함수 내부의 반복문에서 `yield`키워드를 사용하면 제너레이터가 된다.
 
 
-```
+```python
 def range_gen(num):
   i = 0
   while i < num:
@@ -426,7 +426,7 @@ for item in g:
 ### 실습
 1.매개변수로 문자열을 받고, 해당 문자열이 red면 apple을, yellow면 banana를, green이면 melon을, 어떤 경우도 아닐 경우 I don't know를 리턴하는 함수를 정의하고, 사용하여 result변수에 결과를 할당하고 print해본다.
 
-```
+```python
 def print_fruitname(a):
   if a == 'red':
     return 'apple'
@@ -439,7 +439,7 @@ def print_fruitname(a):
 
 ```
 
-```
+```python
 fruit_dict = {
     'red':'apple',
     'yellow':'banana',
@@ -452,7 +452,7 @@ def what_fruit(color):
 
 2.1번에서 작성한 함수에 docstring을 작성하여 함수에 대한 설명을 달아보고, help(함수명)으로 해당 설명을 출력해본다.
 
-```
+```python
 def print_fruitname(a):
   '이 함수는 과일의 색을 넣으면 해당 과일의 정보를 알려줍니다.'
   if a == 'red':
@@ -470,7 +470,7 @@ help(print_fruitname)
 
 3.한 개 또는 두 개의 숫자 인자를 전달받아, 하나가 오면 제곱, 두개를 받으면 두 수의 곱을 반환해주는 함수를 정의하고 사용해본다.
 
-```
+```python
 def print_number(a,b=None):
   if b is None:
     return a ** 2
@@ -523,7 +523,7 @@ print_number(4,6)
 
 4.두 개의 숫자를 인자로 받아 합과 차를 튜플을 이용해 동시에 반환하는 함수를 정의하고 사용해본다.
 
-```
+```python
 def print_number(a,b):
   return (a+b, absa-b)
 
@@ -534,7 +534,7 @@ print_number(9,5)
 
 5.위치인자 묶음을 매개변수로 가지며, 위치인자가 몇 개 전달되었는지를 print하고 개수를 리턴해주는 함수를 정의하고 사용해본다.
 
-```
+```python
 def print_number(*args):
   print('args의 갯수 : {}'.format(args))
   return len(args)
@@ -548,6 +548,6 @@ print_number(3,4,5,6,7)
 
 6.람다함수와 리스트 컴프리헨션을 사용해 한 줄로 구구단의 결과를 갖는 리스트를 생성해본다.
 
-```
+```python
 [(lambda x,y : '{} x {} = {}'.format(x,y,x*y)) (x,y) for x in range(2,10) for y in range(1,10)]
 ```

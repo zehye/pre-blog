@@ -13,14 +13,14 @@ categories: [python]
 
 매번 같은 코드를 계속 써야한다면 번거로우니, 반복적인 작업을 하는 코드를 재사용이 가능하게 정의해 놓은 함수를 만든다.
 
-```
+```python
 def 함수명(매개변수[parameters]):
 	동작
 ```
 
 ### 함수의 정의, 실행
 
-```
+```python
 # 실행 시 'call func'를 print하는 함수 정의
 >>> def func():
 ...   print('call func')
@@ -38,7 +38,7 @@ call func
 
 ### 리턴값이 있는 함수 정의
 
-```
+```python
 >>> def return_true():
 ...   return True
 ...
@@ -46,7 +46,7 @@ call func
 True
 ```
 
-```
+```python
 def add(a,b):
     return a+b
 
@@ -58,7 +58,7 @@ add(5,7)
 
 ### 매개변수를 사용하는 함수 정의
 
-```
+```python
 >>> def print_arguments(something):
 ...   print(something)
 ...
@@ -71,7 +71,7 @@ ABC
 
 > 매개변수는 함수 내부에서 함수에게 전달되어 온 변수 즉, 함수를 정의할 때 들어오는 변수를 의미하고, 인자는 함수를 호출할 때 전달하는 변수 즉, 함수를 정의하고 나서 함수를 사용하는 변수를 의미한다.
 
-```
+```python
 # 함수 정의때는 매개변수
 def func(매개변수1, 매개변수2):
   ...
@@ -88,7 +88,7 @@ def func(매개변수1, 매개변수2):
 
 매개변수의 순서대로 인자를 전달하여 사용하는 경우
 
-```
+```python
 >>> def student(name, age, gender):
 ...   return {'name': name, 'age': age, 'gender': gender}
 ...
@@ -100,14 +100,14 @@ def func(매개변수1, 매개변수2):
 
 매개변수의 이름을 지정하여 인자로 전달하여 사용하는 경우
 
-```
+```python
 >>> student(age=31, name='hanyeong.lee', gender='male')
 {'name': 'hanyeong.lee', 'age': 31, 'gender': 'male'}
 ```
 
 > 위치인자와 키워드 인자를 동시에 쓴다면, 위치인자가 먼저 와야 한다.
 
-```
+```python
 def students(name, age, gender):
     return{
         'name':name,
@@ -122,7 +122,7 @@ students('jihye',gender='female',age=25)
 
 인자가 제공되지 않을 경우, 기본 매개변수로 사용할 값을 지정할 수 있다.
 
-```
+```python
 >>> def student(name, age, gender, cls='WPS'):
 ...   return {'name': name, 'age': age, 'gender': gender, 'class': cls}
 ...
@@ -134,7 +134,7 @@ students('jihye',gender='female',age=25)
 
 기본 매개변수 값은 함수가 실행될 때마다 계산되지 않고, 함수가 정의되는 시점에 계산되어 계속해서 사용된다.
 
-```
+```python
 def return_list(value, result=[]):
   result.append(value)
   return result
@@ -153,7 +153,7 @@ return_list('banana')
 # 그렇기 때문에 위 ['apple']과 같은 메모리 상에 있다.
 ```
 
-```
+```python
 id(return_list(123123))
 id(return_list(456456))
 
@@ -162,7 +162,7 @@ id(return_list(456456))
 
 따라서 함수가 실행되는 시점에 기본 매개변수 값을 계산하기 위해, 아래와 같이 바꿔준다.
 
-```
+```python
 def return_list(value, result=None):
   if result is None:
     result = []
@@ -179,7 +179,7 @@ return_list('banana')
 
 > 잠깐 =와 ==에 대해 이야기해보자면,
 
-```
+```python
 list1 = []
 list1=list2
 
@@ -232,7 +232,7 @@ a is b
 
 더 나아가 True, False, None 이들 또한 객체라고 부르기에
 
-```
+```python
 id(True)
 >>> 4535273808
 
@@ -245,7 +245,7 @@ id(None)
 
 각자에 해당하는 id 값이 존재한다.
 
-```
+```python
 def return_value(abc):
   print(abc)
 
@@ -255,12 +255,12 @@ return_value(3)
 
 이때
 
-```
+```python
 3 is return_value(3)
 >>> 3 False
 ```
 
-```
+```python
 id(return_value(3))
 >>> 4341563880
 
@@ -274,7 +274,7 @@ id(3)
 함수에 위치인자로 주어진 변수들의 묶음은 `매개변수명` 으로 사용할 수 있다. 관용적으로 `*args`를 사용한다.
 > 우리가 따로 위치인자의 수를 정해주지 않았을 때 사용
 
-```
+```python
 def print_args(*args):
   print(args)
 
@@ -287,7 +287,7 @@ print_args(3,5,124,'hello')
 
 함수에 키워드인자로 주어진 변수들의 묶음은 `**매개변수명`으로 사용할 수 있다. 관용적으로 `**kwargs`를 사용한다.
 
-```
+```python
 def print_kwargs(**kwargs):
   print(kwargs)
 
@@ -302,7 +302,7 @@ print_kwargs(a='apple', b='banana', hi='123123123123')
 
 함수 정의 후, 몸체의 시작부분에 문자열로 작성하며, 여러줄로도 작성가능하다.
 
-```
+```python
 def print_args(*args):
   'args로 전달된 위치인자들을 출력해준다.'
   print(args)
@@ -321,7 +321,7 @@ help(print_args)
 
 * 'call func'를 출력하는 함수를 정의하고, 함수를 인자로 받아 실행하는 함수를 정의하여 첫 번째에 정의한 함수를 인자로 전달해 실행해보자.
 
-```
+```python
 def print_call():
   print(call func)
 
@@ -337,7 +337,7 @@ print_execute(print_call)
 
 * 문자열 인자를 하나 전달받는 함수를 만들고, 해당 함수 내부에 전달받은 문자열을 대문자화해서 리턴해주는 내부 함수를 구현한다. 문자열을 전달받는 함수는 내부함수를 실행한 결과를 리턴하도록 한다.
 
-```
+```python
 def execute(a):
   def upper(b):
     return b.upper()

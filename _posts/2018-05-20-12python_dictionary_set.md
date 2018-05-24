@@ -13,7 +13,7 @@ key-value 형태로 항목을 가지는 자료구조
 
 ### 딕셔너리 생성
 
-```
+```python
 >>> empty_dict1 = {}
 >>> empty_dict2 = dict()
 >>> champion_dict = {
@@ -26,7 +26,7 @@ key-value 형태로 항목을 가지는 자료구조
 
 ### 형변환
 
-```
+```python
 >>> sample = [[1,2], [3,4], [5,6]]
 >>> dict(sample)
 {1: 2, 3: 4, 5: 6}
@@ -34,7 +34,7 @@ key-value 형태로 항목을 가지는 자료구조
 
 ### 항목 찾기/추가/변경
 
-```
+```python
 >>> champion_dict['Lux']
 'the Lady of Luminosity'
 >>> champion_dict['Sona'] = 'Maven of the Strings'
@@ -43,7 +43,7 @@ key-value 형태로 항목을 가지는 자료구조
 
 ### 결합 (update)
 
-```
+```python
 >>> com_dict = {}
 >>> com_dict.update(champion_dict)
 >>> com_dict.update(item_dict)
@@ -52,7 +52,7 @@ key-value 형태로 항목을 가지는 자료구조
 
 ### 삭제 (del)
 
-```
+```python
 >>> del com_dict['Doran\'s Blade']
 ```
 
@@ -69,14 +69,14 @@ key-value 형태로 항목을 가지는 자료구조
 
 ### 셋 생성
 
-```
+```python
 >>> empty_set = set()
 >>> champions = {'lux', 'ahri', 'ezreal'}
 ```
 
 ### 형변환
 
-```
+```python
 >>> set('ezreal')
 {'e', 'z', 'a', 'l', 'r'}
 # 중복된 값은 하나로 나타난다.
@@ -102,26 +102,26 @@ key-value 형태로 항목을 가지는 자료구조
 
 1.`apple`은 `사과`, `banana`는 `바나나`, `cherry`는 `체리`의 key-value를 갖는 `fruits`라는 이름의 사전을 만든다.
 
-```
+```python
 fruits = { 'apple': '사과', 'banana': '바나나', 'cherry':'체리'}
 ```
 
 2.`fruits`를 `Set`으로 만들어 `fruits_set`변수에 할당한다.
 
-```
+```python
 fruits_set = set(fruits)
 ```
 
 3.`fruits_set`에 `durian`이 존재하는지 확인한다.
 
-```
+```python
 'durian' in fruits_set
 >>> False
 ```
 
 4.`fruits`사전에서 `apple`키에 해당하는 값을 출력한다.
 
-```
+```python
 fruits['apple']
 >>> '사과'
 ```
@@ -134,7 +134,7 @@ fruits['apple']
 
 * `redvelvet`키의 자식사전에도 `korean`과 `members`키가 있으며, 각각 `'레드벨벳'`이라는 문자열과 `['아이린', '슬기', '웬디', '조이', '예리']`라는 리스트를 갖는다.
 
-```
+```python
 girlgroups = {
   'girlsday': {
     'korean': '걸스데이',
@@ -149,21 +149,21 @@ girlgroups = {
 
 6.`girlgroups`사전의 최상위 키 목록을 출력해본다.
 
-```
+```python
 girlgroups.keys()
 >>> dict_keys(['girlsday', 'redvelvet'])
 ```
 
 7.`girlgroups['girlsday']`의 모든 키를 출력해본다.
 
-```
+```python
 girlgroups['girlsday'].keys()
 >>> dict_keys(['korean', 'members'])
 ```
 
 8.`girlgroups['redvelvet']`의 모든 값을 출력해본다.
 
-```
+```python
 girlgroups['redvelvet'].values()
 >>> dict_values(['레드벨벳', ['아이린', ' 슬기', ' 웬디', ' 조이', ' 예리']])
 ```
@@ -172,21 +172,21 @@ girlgroups['redvelvet'].values()
 
 * x,y,z의 교집합에 해당하는 숫자는?
 
-```
+```python
 x&y&z
 >>> {4, 6}
 ```
 
 * y,z의 교집합이며 x에는 속하지 않는 숫자는?
 
-```
+```python
 (y&z)-x
 >>> {9, 10}
 ```
 
 * x에만 속하고 y,z에는 속하지 않는 숫자는?
 
-```
+```python
 x-(y|z)
 >>> {1, 2, 3}
 ```

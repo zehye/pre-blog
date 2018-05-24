@@ -17,7 +17,7 @@ categories: [python]
 
 - 찾지 못했을 경우 -1을 리턴
 
-```
+```python
 def sequential_search(string, key):
     index = 0
     # 전체문자열을 순회하며 각 글자를 char에 할당
@@ -37,7 +37,7 @@ def sequential_search(string, key):
 # -1 을 리턴하며 함수 종료
 ```
 
-```
+```python
 def sequential_search(string, key):
     index = 0
     # 5글자 문자열의 경우
@@ -74,7 +74,7 @@ def sequential_search(string, key):
 
   - 실제 코드 작성
 
-```
+```python
 ori2 = [2,4,-3,-5,3,1,6,0,8,9]
 
 min = ori2[0]
@@ -85,7 +85,7 @@ for i in ori2:
 print(f'가장 작은 값 : {min}')
 ```
 
-```
+```python
 ori = [9, 1, 6, 8, 4, 3, 2, 0, 5, 7]
 
 for i in range(10):
@@ -111,7 +111,7 @@ for i in range(len(ori) -1):
 
 ```
 
-```
+```python
 ori = [9, 1, 6, 8, 0, 4, 3, 2, 5, 7]
 ori_length = len(ori)
 

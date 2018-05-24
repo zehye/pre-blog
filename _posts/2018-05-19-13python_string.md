@@ -11,7 +11,7 @@ categories: [python]
 
 ### 작은 따음표와 큰 따음표를 혼용해서 쓰는 방법
 
-```
+```python
 # 기본적으로는 ''와 "" 둘다 사용 가능하다.
 >>> '안녕하세요'
 >>> "안녕하세요"
@@ -44,7 +44,7 @@ categories: [python]
 
 문자열에서 문자를 추출할 때 가장 왼쪽은 0, 가장 오른쪽은 -1
 
-```
+```python
 >>> lux = '빛으로 강타해요!'
 >>> lux[0]
 '빛'
@@ -78,7 +78,7 @@ categories: [python]
 
 ### 문자열 나누기 (slpit)
 
-```
+```python
 >>> girlsday = "민아,유라,소진,혜리"
 >>> girlsday.split(',')
 ['민아', '유라', '소진', '혜리']
@@ -87,7 +87,7 @@ categories: [python]
 
 ### 문자열 결합 (join)
 
-```
+```python
 >>> girlsday_list = girlsday.split(',')
 >>> girlsday_str = ', '.join(girlsday_list)
 >>> print(girlsday_str)
@@ -96,7 +96,7 @@ categories: [python]
 
 ### {} format
 
-```
+```python
 >>> fruits = '사과, 바나나, 멜론'.split(',')
 >>> colors = '빨강, 노랭, 초록'.splt(',')
 
@@ -113,7 +113,7 @@ fruits: 멜론, colors: 초록
 `f'{변수 또는 표현식}'`
 
 
-```
+```python
 # 기본 형태
 apple = '사과'
 banana = '바나나'
@@ -127,7 +127,7 @@ f'{apple}은 맛있어 맛있으면 {banana} {banana}는 길어 길면 {train}]
 
 1.여러 줄의 텍스트를 `multi_lines`변수에 할당하고, `print()`함수로의 출력과 인터프리터의 자동 출력(변수명 입력)을 비교해보시오.
 
-```
+```python
 multi_lines = '''안녕하세요
 안
 녕
@@ -141,7 +141,7 @@ multi_lines = '''안녕하세요
 
 2.`str1`, `str2`변수에 각각 문자열을 할당하고, 두 변수를 결합해 `str3`변수에 할당해보시오.
 
-```
+```python
 str1 = '안녕'
 str2 = '하세요'
 
@@ -152,7 +152,7 @@ str2 = '하세요'
 
 3.`str1`변수에 `*` 연산자를 사용한 결과를 출력해보시오.
 
-```
+```python
 >>> str3 * 3
 '안녕하세요안녕하세요안녕하세요'
 ```

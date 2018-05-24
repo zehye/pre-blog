@@ -15,7 +15,7 @@ categories: [python]
 
 기본 사용법
 
-```
+```python
 A = [0,1,2,3]
 
 target = 1
@@ -32,7 +32,7 @@ enumerate는 열거하다라는 뜻으로 순서가 있는 자료형(리스트, 
 
 (보통 for문과 자주 사용된다.)
 
-```
+```python
 for i, name in enumerate(['body', 'foo', 'bar']):
 ... print(i, name)
 ...
@@ -48,7 +48,7 @@ for 문처럼 반복되는 구간에서 객체가 현재 어느 위치에 있는
 
 ## dictinary key로 value얻기 (get)
 
-```
+```python
 >>> a = {'name':'pey', 'phone':'0119993323', 'birth': '1118'}
 >>> a.get('name')
 'pey'
