@@ -3,7 +3,7 @@ layout: post
 title:  python regular expression(정규표현식)
 categories: [python]
 ---
-이 포스팅에서는 `python`의 `regular expression`실습 문제 풀이를 하겠다.
+이 포스팅에서는 `python`의 `regular expression`에 대해 알아보도록 하겠다.
 <hr>
 
 ## 정규표현식 (Regular Expression)
