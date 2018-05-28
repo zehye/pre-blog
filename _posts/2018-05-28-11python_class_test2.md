@@ -66,7 +66,6 @@ class Book:
     def __init__(self, title, location):
         self.title = title
         self.location = location
-        self.time = time
 
     @property
     def is_borrowed(self):
