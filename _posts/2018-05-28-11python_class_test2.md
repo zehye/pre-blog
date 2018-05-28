@@ -42,15 +42,15 @@ class Library:
         self.name = name
         self.book_list = []
 
-    def add_book(self):
-        if self.title in self.book_list:
-            print('현재 {}책은 {}에 있습니다.'.format(self.title,self.name))
+    def add_book(self, book):
+        if book.title in self.book_list:
+            print('현재 {}책은 {}에 있습니다.'.format(book.title,self.name))
         else:
             (self.book_list).append(title)
 
-    def remove_book(self):
-        if self.title not in self.book_list:
-            print('현재 {}은 {}에 없습니다'.format(self.title,self.name))
+    def remove_book(self, book):
+        if book.title not in self.book_list:
+            print('현재 {}은 {}에 없습니다'.format(book.title,self.name))
         else:
             (self.book_list).remove(title)
 
